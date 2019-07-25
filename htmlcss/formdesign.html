@@ -5,33 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script>
+function funreset() {
+    document.getElementById("frm1").reset();
+
+}
+function funsubmit(){
+    var v1 = document.getElementById("n1").value;
+    var v2 = document.getElementById("rn2").value;
+    var v3 = document.getElementById("an3").value;
+    var v4 = document.getElementById("cl4").value;
+    var v5 = document.getElementById("pl5").value;
+    var v6 = document.getElementById("mb6").value;
+
+    
+document.getElementById("lb1").innerHTML=v1;
+document.getElementById("lb2").innerHTML=v2;
+document.getElementById("lb3").innerHTML=v3;
+document.getElementById("lb4").innerHTML=v4;
+document.getElementById("lb5").innerHTML=v5;
+document.getElementById("lb6").innerHTML=v6;
+
+}
+
+</script>
+
+
+
+
+
+
 </head>
+
 <body>
-    <h1> Registration Form</h1>
-    <table>
+    <h1 style="text-align: center"> Registration Form</h1>
+    <form action="" id="frm1">
+        <div class="form-group">
+    <table class="table">
 <tr>
-    <td><label for="lb1" >
+    <td><label for="lb1" class="form-check-label">
         Name
     </label></td>
     <td>
-        <input type="text"/>
+        <input type="text" class="form-control" id="n1"/>
     </td>
 </tr>
-<tr><td><label for="lb1">Roll Number</label></td>
-<td><input type="text"/></td></tr>
-<tr><td><label for="lb1">Addmission Number</label></td>
-<td><input type="text"/></td></tr>
-    <tr><td><label for="lb1">College</label></td>
-    <td><input type="text"/></td></tr>
-    <tr><td><label for="lb1">Place</label></td>
-    <td><input type="text"/></td></tr>
+<tr><td><label for="lb1" class="form-check-label">Roll Number</label></td>
+<td><input type="text"class="form-control" id="rn2"/></td></tr>
+<tr><td><label for="lb1" class="form-check-label">Addmission Number</label></td>
+<td><input type="text"class="form-control"id="an3"/></td></tr>
+    <tr><td><label for="lb1" class="form-check-label">College</label></td>
+    <td><input type="text"class="form-control"id="cl4"/></td></tr>
+    <tr><td><label for="lb1" class="form-check-label">Place</label></td>
+    <td><input type="text"class="form-control"id="pl5"/></td></tr>
     <tr><td><label for="lb1">Mobile</label></td>
-    <td><input type="text"/></td>
+    <td><input type="text"class="form-control"id="mb6"/></td>
     </tr>
-    <tr><td><input type="button" value="Reset"></td>
- <td><input type="button" value="Submit"></td>   
+    <tr><td><input type="button" value="Reset" class="btn btn-primary" onclick="funreset();"></td>
+ <td><input type="button" value="Submit"class="btn btn-success"onclick="funsubmit();"></td>   
     </tr>
-    
+    <tr>
+<td>
+    <label for=""id="lb1"></label>
+    <label for=""id="lb2"></label>
+    <label for=""id="lb3"></label>
+    <label for=""id="lb4"></label>
+    <label for=""id="lb5"></label>
+    <label for=""id="lb6"></label>
+</td>
+        </tr>
 </table>
+</div>
+</form>
 </body>
 </html>

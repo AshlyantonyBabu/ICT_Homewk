@@ -23,6 +23,68 @@ border: 2px solid red;
 }
 
     </style>
+<script>
+function funreset(){
+    document.getElementById("frm1").reset();
+    document.getElementById("frm2").reset();
+
+
+
+}
+function log(){
+    u1=document.getElementById("unam").value;
+    p1=document.getElementById("pass").value;
+document.getElementById("lb1").innerHTML=u1;
+document.getElementById("lb2").innerHTML=p1;
+
+
+}
+function funreg(){
+
+n1=document.getElementById("nam").value;
+n2=document.getElementById("dis1").length;
+r1=document.getElementById("g1");
+if(r1.checked)
+{
+    document.getElementById("lb3").innerHTML="male";
+    
+}
+else
+{
+    document.getElementById("lb4").innerHTML="female";
+}
+uu1=document.getElementById("unam1").value;
+pp1=document.getElementById("pass1").value;
+pp2=document.getElementById("pass2").value;
+
+
+document.getElementById("lb5").innerHTML=n1;
+document.getElementById("lb6").innerHTML=n2;
+document.getElementById("lb7").innerHTML=uu1;
+document.getElementById("lb8").innerHTML=pp1;
+document.getElementById("lb9").innerHTML=pp2;
+
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
 
@@ -33,36 +95,44 @@ border: 2px solid red;
                    <h2>Login</h2>
                </div>
                 <div class="div1">
-                    
+                    <form action="" id="frm1">
                   <table class="table">
                       <tr>
                           <td>
                               <label for="" class="label1">Username</label>
                           </td>
                           <td>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" id="unam">
                           </td>
 
                       </tr>
                       <tr>
                           <td>
-                              <label for="" class="label1">Password</label>
+                              <label for="" class="label1" >Password</label>
                           </td>
                           <td>
-                              <input type="password" class="form-control">
+                              <input type="password" class="form-control"id="pass">
                           </td>
                           <tr>
                               <td>
-                                  <input type="button " class="btn btn-info" value="Reset">
+                                  <input type="button " class="btn btn-info" value="Reset" onclick="funreset();"/>
 
                               </td>
                               <td>
-                                  <input type="button" class= "btn btn-success"  value="Login">
+                                  <input type="button" class= "btn btn-success"  value="Login" onclick="log();">
                               </td>
                           </tr>
             
                       </tr>
+                      <tr>
+                            <td>
+                                <label for=""id="lb1"></label>
+                                <label for=""id="lb2"></label>
+                                
+                            </td>
+                                    </tr>
                   </table>
+                </form>
                 </div>
                 </div>
 <div class="col col-12 col-sm-6">
@@ -70,13 +140,14 @@ border: 2px solid red;
         <h2>Register here....</h2>
     </div>
     <div class="div2">
+        <form action="" id="frm2">
         <table class="table">
             <tr>
                 <td>
                     <label for="" class="label2">Name</label>
                 </td>
                 <td>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="nam" >
                 </td>
             </tr>
             <tr>
@@ -109,12 +180,12 @@ border: 2px solid red;
                 <td>
                         <div class="form-check-inline">
                                 <label class="form-check-label">
-                                  <input type="radio" class="form-check-input" name="gender">Male
+                                  <input type="radio" class="form-check-input" name="gender"value="male"id="g1">Male
                                 </label>
                               </div>
                               <div class="form-check-inline">
                                 <label class="form-check-label">
-                                  <input type="radio" class="form-check-input" name="gender">Female
+                                  <input type="radio" class="form-check-input" name="gender"value="female"id="g2">Female
                                 </label>
                               </div>
                 </td>
@@ -124,16 +195,16 @@ border: 2px solid red;
                             <label for="" class="label2">Username</label>
                         </td>
                         <td>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control"id="unam1">
                         </td>
 
             </tr>
             <tr>
                     <td>
-                            <label for="" class="label2">Password</label>
+                            <label for="" class="label2" id="p1">Password</label>
                         </td>
                         <td>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control"id="pass1">
                         </td>
             </tr>
             <tr>
@@ -141,19 +212,32 @@ border: 2px solid red;
                             <label for="" class="label1">Confirm Password</label>
                         </td>
                         <td>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" id="pass2">
                         </td>
             </tr>
             <tr>
                     <td>
-                            <input type="button " class="btn btn-warning" value="Reset">
+                            <input type="button " class="btn btn-warning" value="Reset" onclick="funreset();">
 
                         </td>
                         <td>
-                            <input type="button" class= "btn btn-primary"  value="Register">
+                            <input type="button" class= "btn btn-primary"  value="Register"onclick="funreg();">
                         </td>
             </tr>
+            <tr>
+                    <td>
+                        <label for=""id="lb3"></label>
+                        <label for=""id="lb4"></label>
+                        <label for=""id="lb5"></label>
+                        <label for=""id="lb6"></label>
+                        <label for=""id="lb7"></label>
+                        <label for=""id="lb8"></label>
+                        <label for="" id="lb9"></label>
+                    </td>
+                            </tr>
         </table>
+
+    </form>
     </div>
 
 </div>
